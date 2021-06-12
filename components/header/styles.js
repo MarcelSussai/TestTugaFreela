@@ -2,15 +2,21 @@ import styled from 'styled-components'
 
 // Header Container _______________________________________________
 export const HeaderSty = styled.header`
-  padding: 0 8px 0 8px;
+  position: fixed;
+  padding: 0 24px 0 8px;
   width: 100%;
   height: 64px;
   background: ${ ({ theme }) => theme.colors.primary };
   color: ${ ({ theme }) => theme.colors.white };
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 1024px) {
+    padding: 0 16px 0 8px;
+  }
+
 `
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 

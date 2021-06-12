@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
+import { theme } from '../components/StylesPatterns'
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -57,16 +57,16 @@ a:not([class]) {
 }
 
 img {
-  max-width: 100%;
+  ${'' /* max-width: 100%; */}
   display: block;
 }
 
-input,
+${'' /* input,
 button,
 textarea,
 select {
   font: inherit;
-}
+} */}
 
 @media (prefers-reduced-motion: reduce) {
   * {
@@ -77,23 +77,6 @@ select {
   }
 }
 `
-
-const theme = {
-  colors: {
-    primary:    '#363636',
-    purple200:  '#D6B8FF',
-    purple400:  '#B383F3',
-    purple600:  '#8B6CB5',
-    purple700:  '#765C98',
-    gray:       '#6C7A89',
-    light:      '#F6F6F6',
-    blue:       '#0033FF',
-    green:      '#1ABF00',
-    red:        '#C10505',
-    yellow:     '#FFC107',
-    white:      '#FFFFFF'
-  },
-}
 
 export default function App({ Component, pageProps }) {
 

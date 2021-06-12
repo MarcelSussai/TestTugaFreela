@@ -6,17 +6,18 @@ import AppCtx from '../components/contexts/ctxGlobal';
 
 export default function TugaFreela() {
 
-  const [ testeCtx, setTesteCtx ] = useState('teste')
+  const [ isOpenMenu, setIsOpenMenu ] = useState(false)
 
   return (
     <>
       <Head title="Home" />
       
       <AppCtx.Provider value={{
-          testeCtx, setTesteCtx
+          isOpenMenu, setIsOpenMenu
         }} >
+          
           <Header />
-          <p>{testeCtx}</p>
+
         </AppCtx.Provider>
     </>
 )}
