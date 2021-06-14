@@ -1,5 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../components/StylesPatterns'
+import AppCtx from '../components/contexts/ctxGlobal';
+import { useState } from 'react';
 
 const GlobalStyle = createGlobalStyle`
 *,
@@ -80,13 +82,18 @@ select {
 
 export default function App({ Component, pageProps }) {
 
+  const [ isOpenMenu, setIsOpenMenu ] = useState(false)
 
   return (
     <>
       <GlobalStyle />
-      <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
-      </ThemeProvider>
+      <AppCtx.Provider value={{
+          isOpenMenu, setIsOpenMenu
+        }} >
+        <ThemeProvider theme={theme}>
+            <Component {...pageProps} />
+        </ThemeProvider>
+      </AppCtx.Provider>
     </>
   )
 }

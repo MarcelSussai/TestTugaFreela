@@ -75,22 +75,27 @@ export const StyNavWrapper = styled.nav`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  top: 64px;
+  top: 62px;
   left: 0;
-  width: 88vw;
+  width: 80vw;
   height: fit-content;
   padding: 16px;
   background: ${ ({ theme }) => theme.colors.primary};
+  transform-origin: 0 0;
+  ${'' /* transform: scaleY(0); */}
   transform: translate3d(0, 0, 0);
+  z-index: -3;
+  ${'' /* opacity: 1; */}
   ${trans01}
   box-shadow: 8px 12px 16px ${ ({ theme }) => theme.colors.blackShadow };
   &.none {
     transform: translate3d(-120%, 0, 0);
-
+    ${'' /* opacity: 0; */}
+    ${'' /* transform: scaleY(1); */}
     @media (min-width: 1024px) {
       transform: translate3d(0, 0, 0);
+      opacity: 1;
     }
-
   }
 
   @media (min-width: 1024px) {
@@ -131,6 +136,7 @@ export const StyNavButton = styled.button`
   border: none;
   font-weight: 400;
   cursor: pointer;
+  width: 184px;
   ${trans01}
 
   &:hover {
@@ -138,12 +144,10 @@ export const StyNavButton = styled.button`
   }
 
   @media (min-width: 1024px) {
-    width: 100%;
     margin: 0;
     padding: 12px 0 12px 0;
     flex: 1;
   }
-
 `
 
 export const StyNavLink = styled(Link)`
@@ -153,7 +157,7 @@ export const StyNavLink = styled(Link)`
 export const StyNavLinkWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
+  ${'' /* width: 100%; */}
   padding: 0 24px 0 24px;
   align-items: center;
   margin-top: 32px;
@@ -166,7 +170,47 @@ export const StyNavLinkWrapper = styled.div`
     flex: 2;
     margin: 0;
     padding: 0 16px 0 16px;
-    justify-content: center;
+    width: fit-content;
+    justify-content: flex-end;
+  }
+  @media (min-width: 1200px) {
+    flex: 3;
+  }
+  @media (min-width: 1600px) {
+    flex: 5;
+  }
+  @media (min-width: 2000px) {
+    flex: 7;
+  }
+  @media (min-width: 2400px) {
+    flex: 9;
+  }
+`
+
+export const StyNavContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    margin-left: 16px;
+    justify-content: space-between;
+  }
+
+`
+
+export const StyNavLinksBtnContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 24px;
+    width: 100%;
   }
 `
 // ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾

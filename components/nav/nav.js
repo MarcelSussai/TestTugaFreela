@@ -1,10 +1,26 @@
 
+// LIBS ___________________________________________________________
 import { useContext } from 'react';
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// CONTEXTO _______________________________________________________
 import AppCtx from '../contexts/ctxGlobal';
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// ESTILOS ________________________________________________________
+import { 
+  StyNavWrapper,
+  StyNavButton,
+  StyNavContainer,
+  StyNavLinksBtnContainer,
+} from './styles';
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+
+// COMPONENTES ____________________________________________________
 import BtnMenu from './btnMenu';
-import { StyNavWrapper, StyNavButton } from './styles';
 import SearchByFreela from './searchByFreela';
 import LinksNav from './links';
+// ‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
 
 const Nav = () => {
@@ -15,9 +31,13 @@ const Nav = () => {
   <>
     <BtnMenu />
     <StyNavWrapper className={isOpenMenu ? '' : 'none'}>
-      <SearchByFreela />
-      <LinksNav />
-      <StyNavButton>PUBLIQUE UM PROJETO</StyNavButton>
+      <StyNavContainer>
+        <SearchByFreela />
+        <StyNavLinksBtnContainer>
+          <LinksNav />
+          <StyNavButton>PUBLIQUE UM PROJETO</StyNavButton>
+        </StyNavLinksBtnContainer>
+      </StyNavContainer>
     </StyNavWrapper>
   </>
 );

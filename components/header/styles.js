@@ -12,6 +12,7 @@ export const HeaderSty = styled.header`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  z-index: 100;
 
   @media (min-width: 1024px) {
     padding: 0 16px 0 8px;
