@@ -128,15 +128,15 @@ export const StyNavA = styled.a`
 
 export const StyNavButton = styled.button`
   ${fontF}
-  margin: 32px;
-  padding: 16px;
+  margin: 16px;
+  padding: 12px;
   background: ${ ({ theme }) => theme.colors.purple200 };
   color: ${ ({ theme }) => theme.colors.white };
   border-radius: 4px;
   border: none;
+  font-size: 14px;
   font-weight: 400;
   cursor: pointer;
-  width: 184px;
   ${trans01}
 
   &:hover {
@@ -144,8 +144,9 @@ export const StyNavButton = styled.button`
   }
 
   @media (min-width: 1024px) {
+    width: 184px;
     margin: 0;
-    padding: 12px 0 12px 0;
+    padding: 8px 0 8px 0;
     flex: 1;
   }
 `

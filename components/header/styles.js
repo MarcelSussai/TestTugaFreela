@@ -3,6 +3,7 @@ import styled from 'styled-components'
 // Header Container _______________________________________________
 export const HeaderSty = styled.header`
   position: fixed;
+  top: 0;
   padding: 0 24px 0 8px;
   width: 100%;
   height: 64px;
@@ -15,7 +16,7 @@ export const HeaderSty = styled.header`
   z-index: 100;
 
   @media (min-width: 1024px) {
-    padding: 0 16px 0 8px;
+    padding: 0 24px 0 16px;
   }
 
 `

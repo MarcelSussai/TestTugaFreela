@@ -3,7 +3,7 @@ import { fontF, trans01 } from '../StylesPatterns'
 
 export const StyMainHomeContainer = styled.main`
   width: 100%;
-  transform: translateY(64px);
+  transform: translateY(63.8px);
 `
 
 export const StyMainCallAction1 = styled.section`
@@ -35,6 +35,7 @@ export const StyMainCADiv = styled.section`
   }
   @media (min-width: 1024px) {
     width: 48%;
+    padding: 32px;
   }
 `
 
@@ -49,13 +50,25 @@ export const StyMainCAH1 = styled.h1`
   }
 
   @media (min-width: 375px) {
-  font-size: 28px;
+    font-size: 28px;
   }
   @media (min-width: 425px) {
-  font-size: 32px;
+    font-size: 32px;
   }
   @media (min-width: 768px) {
-  font-size: 36px;
+    font-size: 36px;
+  }
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (min-width: 1400px) {
+    font-size: 48px;
+  }
+  @media (min-width: 1640px) {
+    font-size: 56px;
+  }
+  @media (min-width: 2000px) {
+    font-size: 64px;
   }
 `
 
@@ -89,7 +102,7 @@ export const StyMainButtonGeneric = styled.button`
 
   @media (min-width: 375px) {
     font-size: 11px;
-    padding: 16px;
+    padding: 12px;
   }
   @media (min-width: 425px) {
     font-size: 12px;
@@ -102,3 +115,86 @@ export const StyMainButtonGeneric = styled.button`
   }
   
 `
+
+export const StyMainCallAction2 = styled.section`
+  display: flex;
+  flex-direction: column;
+`
+
+export const StyMainCAH2 = styled.h2`
+  width: 100%;
+  ${fontF}
+  font-weight: 400;
+  text-align: center;
+  margin-top: 32px;
+  font-size: 32px;
+`
+
+export const StyMainItemsContainer = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 56px;
+
+  @media (min-width: 425px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media (min-width: 1440px) {
+    padding: 40px;
+  }
+
+`
+
+export const StyMainItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+`
+
+export const StyMainItemImg = styled.img`
+  width: 56%;
+  
+  @media (min-width: 425px) {
+    width: 100%;
+  }
+  @media (min-width: 600px) {
+    width: 160px;
+  }
+  @media (min-width: 768px) {
+    width: 100%;
+  }
+  @media (min-width: 1200px) {
+    width: unset;
+    height: 200px;
+  }
+`
+
+export const StyMainItemTitle = styled.h3`
+  ${fontF}
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+`
+
+export const StyMainText = styled.p`
+  ${fontF}
+  font-size: 14px;
+  text-align: center;
+`
+
+export const StyMainCallAction3 = styled.section``
+
+export const StyMainCA3Container = styled.div``
+
