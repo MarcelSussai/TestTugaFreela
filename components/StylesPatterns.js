@@ -13,6 +13,7 @@ export const theme = {
     red:          '#C10505',
     yellow:       '#FFC107',
     white:        '#FFFFFF',
+    whiteOpacity: '#FFFFFF00',
     black:        '#000000',
     blackShadow:  '#00000032'
   },

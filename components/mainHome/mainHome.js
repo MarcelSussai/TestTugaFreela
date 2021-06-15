@@ -1,11 +1,13 @@
 import { 
   StyMainButtonGeneric,
   StyMainButtonGenericContainer, 
+  StyMainCA3Container, 
   StyMainCADiv, 
   StyMainCAH1, 
   StyMainCAH2, 
   StyMainCallAction1, 
   StyMainCallAction2, 
+  StyMainCallAction3, 
   StyMainHomeContainer, 
   StyMainItem, 
   StyMainItemImg, 
@@ -62,7 +64,22 @@ const MainHome = () => {
             </StyMainText>
           </StyMainItem>
         </StyMainItemsContainer>
+        <StyMainButtonGenericContainer>
+          <StyMainButtonGeneric primary>QUERO CONTRATAR</StyMainButtonGeneric>
+          <StyMainButtonGeneric>TRABALHE COMO FREELA</StyMainButtonGeneric>
+        </StyMainButtonGenericContainer>
       </StyMainCallAction2>
+      <StyMainCallAction3>
+        <StyMainCA3Container>
+          <StyMainCAH2 guywithfone>
+            Torne-se um profissional digital. <span>Torne-se um freelancer.</span>
+          </StyMainCAH2>
+          <StyMainText>
+            Você pode melhorar a sua presença na web, vender online, vender nas redes sociais, criar conteúdos que mantenham seus clientes interessados na sua marca e muito mais!
+          </StyMainText>
+          <StyMainButtonGeneric primary>COMECE SUA JORNADA</StyMainButtonGeneric>
+        </StyMainCA3Container>
+      </StyMainCallAction3>
     </StyMainHomeContainer>
   </>
 );

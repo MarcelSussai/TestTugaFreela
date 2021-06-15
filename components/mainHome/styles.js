@@ -4,6 +4,10 @@ import { fontF, trans01 } from '../StylesPatterns'
 export const StyMainHomeContainer = styled.main`
   width: 100%;
   transform: translateY(63.8px);
+  ${'' /* display: flex;
+  flex-direction: column;
+  gap: 32px; */}
+  overflow: hidden;
 `
 
 export const StyMainCallAction1 = styled.section`
@@ -112,6 +116,7 @@ export const StyMainButtonGeneric = styled.button`
   }
   @media (min-width: 1024px) {
     font-size: 14px;
+    width: fit-content;
   }
   
 `
@@ -119,6 +124,10 @@ export const StyMainButtonGeneric = styled.button`
 export const StyMainCallAction2 = styled.section`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 32px;
 `
 
 export const StyMainCAH2 = styled.h2`
@@ -126,8 +135,36 @@ export const StyMainCAH2 = styled.h2`
   ${fontF}
   font-weight: 400;
   text-align: center;
-  margin-top: 32px;
-  font-size: 32px;
+  margin-top: 80px;
+  font-size: 24px;
+  color: ${({ theme }) => theme.colors.primary};
+  
+  & span {
+    font-weight: 700;
+  }
+
+  @media (min-width: 375px) {
+    font-size: 28px;
+  }
+  @media (min-width: 425px) {
+    font-size: 32px;
+  }
+  @media (min-width: 768px) {
+    font-size: 36px;
+    margin-top: ${props => props.guywithfone ? '0' : '80px'};
+  }
+  @media (min-width: 1024px) {
+    font-size: 40px;
+  }
+  @media (min-width: 1400px) {
+    font-size: 48px;
+  }
+  @media (min-width: 1640px) {
+    font-size: 56px;
+  }
+  @media (min-width: 2000px) {
+    font-size: 64px;
+  }
 `
 
 export const StyMainItemsContainer = styled.div`
@@ -143,10 +180,9 @@ export const StyMainItemsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
-
   @media (min-width: 1440px) {
     padding: 40px;
   }
@@ -169,13 +205,13 @@ export const StyMainItemImg = styled.img`
     width: 100%;
   }
   @media (min-width: 600px) {
-    width: 160px;
-  }
-  @media (min-width: 768px) {
-    width: 100%;
-  }
-  @media (min-width: 1200px) {
     width: unset;
+    height: 160px;
+  }
+  ${'' /* @media (min-width: 768px) {
+    width: 100%;
+  } */}
+  @media (min-width: 1200px) {
     height: 200px;
   }
 `
@@ -185,6 +221,7 @@ export const StyMainItemTitle = styled.h3`
   font-size: 16px;
   font-weight: 700;
   width: 100%;
+  color: ${({ theme }) => theme.colors.primary};
   text-align: center;
 `
 
@@ -192,9 +229,66 @@ export const StyMainText = styled.p`
   ${fontF}
   font-size: 14px;
   text-align: center;
+  color: ${({ theme }) => theme.colors.primary};
 `
 
-export const StyMainCallAction3 = styled.section``
+export const StyMainCallAction3 = styled.section`
+  
+  background-image: url('/img_02.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 100% 0%;
+  width: 100%;
+  ${'' /* overflow: scroll; */}
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 536px;
 
-export const StyMainCA3Container = styled.div``
+  @media (min-width: 375px) {
+    height: 568px;
+  }
+  @media (min-width: 425px) {
+    height: 600px;
+  }
+  @media (min-width: 744px) {
+    height: 648px;
+  }
+  @media (min-width: 768px) {
+    height: unset;
+    background-size: contain;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-position: 200px 0%;
+  }
+  @media (min-width: 900px) {
+    background-position: 100% 0%;
+  }
+`
+
+export const StyMainCA3Container = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+  background: linear-gradient(0deg, ${({ theme }) => theme.colors.white} 80%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+  
+  @media (min-width: 768px) {
+    width: 64%;
+    height: 100%;
+    ${'' /* display: block; */}
+    padding-right: 120px;
+    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 88%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+  }
+  @media (min-width: 1104px) {
+    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 92%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+  }
+  @media (min-width: 1216px) {
+    width: 80%;
+    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 94%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+  }
+`
 
