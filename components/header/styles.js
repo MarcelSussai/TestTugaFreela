@@ -16,7 +16,7 @@ export const HeaderSty = styled.header`
   z-index: 100;
 
   @media (min-width: 1024px) {
-    padding: 0 24px 0 16px;
+    padding: 0 24px 0 32px;
   }
 
 `

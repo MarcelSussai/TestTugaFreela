@@ -135,7 +135,7 @@ export const StyMainCAH2 = styled.h2`
   ${fontF}
   font-weight: 400;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 40px;
   font-size: 24px;
   color: ${({ theme }) => theme.colors.primary};
   
@@ -145,13 +145,15 @@ export const StyMainCAH2 = styled.h2`
 
   @media (min-width: 375px) {
     font-size: 28px;
+    margin-top: 32px;
   }
   @media (min-width: 425px) {
-    font-size: 32px;
+    margin-top: 8px;
   }
   @media (min-width: 768px) {
     font-size: 36px;
     margin-top: ${props => props.guywithfone ? '0' : '80px'};
+    text-align: ${props => props.guywithfone ? 'left' : 'center'};
   }
   @media (min-width: 1024px) {
     font-size: 40px;
@@ -230,42 +232,31 @@ export const StyMainText = styled.p`
   font-size: 14px;
   text-align: center;
   color: ${({ theme }) => theme.colors.primary};
+  @media (min-width: 1024px) {
+    max-width: 666px;
+    text-align: left;
+  }
 `
 
 export const StyMainCallAction3 = styled.section`
-  
   background-image: url('/img_02.jpg');
-  background-size: contain;
+  background-size: 100%;
   background-repeat: no-repeat;
-  background-position: 100% 0%;
+  background-position: 80% 0%;
+  
   width: 100%;
-  ${'' /* overflow: scroll; */}
   display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  height: 536px;
+  align-items: flex-end;
 
-  @media (min-width: 375px) {
-    height: 568px;
-  }
-  @media (min-width: 425px) {
-    height: 600px;
-  }
-  @media (min-width: 744px) {
-    height: 648px;
-  }
   @media (min-width: 768px) {
-    height: unset;
-    background-size: contain;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    background-position: 200px 0%;
+    background-size: 98vw;
+    background-position: 180% 0%;
   }
-  @media (min-width: 900px) {
+  @media (min-width: 1024px) {
+    background-size: contain;
     background-position: 100% 0%;
   }
+
 `
 
 export const StyMainCA3Container = styled.div`
@@ -273,22 +264,103 @@ export const StyMainCA3Container = styled.div`
   display: flex;
   flex-direction: column;
   gap: 32px;
-  padding: 16px;
-  background: linear-gradient(0deg, ${({ theme }) => theme.colors.white} 80%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
-  
+  padding: 32px;
   @media (min-width: 768px) {
     width: 64%;
     height: 100%;
     ${'' /* display: block; */}
     padding-right: 120px;
-    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 88%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+    ${'' /* background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 88%, ${({ theme }) => theme.colors.whiteOpacity} 100%); */}
   }
   @media (min-width: 1104px) {
-    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 92%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+    ${'' /* background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 92%, ${({ theme }) => theme.colors.whiteOpacity} 100%); */}
   }
   @media (min-width: 1216px) {
-    width: 80%;
-    background: linear-gradient(90deg, ${({ theme }) => theme.colors.white} 94%, ${({ theme }) => theme.colors.whiteOpacity} 100%);
+    width: 64%;
+    justify-content: center;
+    padding-top: 64px;
+  }
+  @media (min-width: 1480px) {
+    width: 74%;
+  }
+  @media (min-width: 1600px) {
+    width: 64%;
+    padding-left: 40px;
+  }
+  @media (min-width: 2160px) {
+    width: 56%;
+    padding-left: 40px;
   }
 `
 
+export const StyMainCA3DivGradient = styled.div`
+  background: linear-gradient(to top, #FFFFFF 56%, #FFFFFF00 100%);
+  ${'' /* height: -800%; */}
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    background: linear-gradient(to right, #FFFFFF 40%, #FFFFFF00 100%);
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+    height: max-content;
+
+    ${'' /* align-items: flex-end; */}
+  }
+  @media (min-width: 1200px) {
+    background: linear-gradient(to right, #FFFFFF 48%, #FFFFFF00 100%);
+  }
+  @media (min-width: 1390px) {
+    background: linear-gradient(to right, #FFFFFF 64%, #FFFFFF00 100%);
+  }
+  @media (min-width: 1744px) {
+    background: linear-gradient(to right, #FFFFFF 72%, #FFFFFF00 100%);
+  }
+
+  & .esp {
+    opacity: 0;
+    width: 100%;
+    height: 120px;
+
+    @media (min-width: 375px) {
+      height: 184px;
+    }
+    @media (min-width: 425px) {
+      height: 232px;
+    }
+    @media (min-width: 600px) {
+      height: 320px;
+    }
+    @media (min-width: 768px) {
+      height: 100%;
+      width: 200px;
+      ${'' /* display: none; */}
+    }
+    @media (min-width: 944px) {
+      width: 360px;
+    }
+    @media (min-width: 1200px) {
+      width: 560px;
+    }
+    @media (min-width: 1312px) {
+      width: 688px;
+    }
+    @media (min-width: 1390px) {
+      width: 666px;
+    }
+
+
+
+  }
+`
+export const StyMainCallAction4 = styled.section`
+
+`
+export const StyMainItemMark = styled(StyMainItemTitle)`
+
+`
+export const StyMainItemContainerTwo = styled(StyMainItemsContainer)`
+
+`

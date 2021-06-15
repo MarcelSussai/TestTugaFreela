@@ -2,20 +2,22 @@ import {
   StyMainButtonGeneric,
   StyMainButtonGenericContainer, 
   StyMainCA3Container, 
+  StyMainCA3DivGradient, 
   StyMainCADiv, 
   StyMainCAH1, 
   StyMainCAH2, 
   StyMainCallAction1, 
   StyMainCallAction2, 
   StyMainCallAction3, 
+  StyMainCallAction4, 
   StyMainHomeContainer, 
   StyMainItem, 
   StyMainItemImg, 
   StyMainItemsContainer,
+  StyMainItemContainerTwo,
   StyMainItemTitle,
   StyMainText
 } from "./styles";
-
 
 const MainHome = () => {
   return (
@@ -70,16 +72,27 @@ const MainHome = () => {
         </StyMainButtonGenericContainer>
       </StyMainCallAction2>
       <StyMainCallAction3>
-        <StyMainCA3Container>
-          <StyMainCAH2 guywithfone>
-            Torne-se um profissional digital. <span>Torne-se um freelancer.</span>
-          </StyMainCAH2>
-          <StyMainText>
-            Você pode melhorar a sua presença na web, vender online, vender nas redes sociais, criar conteúdos que mantenham seus clientes interessados na sua marca e muito mais!
-          </StyMainText>
-          <StyMainButtonGeneric primary>COMECE SUA JORNADA</StyMainButtonGeneric>
-        </StyMainCA3Container>
+        <StyMainCA3DivGradient>
+          <div className="esp"> __ </div>
+          <StyMainCA3Container>
+            <StyMainCAH2 guywithfone>
+              Torne-se um profissional digital. <span>Torne-se um freelancer.</span>
+            </StyMainCAH2>
+            <StyMainText>
+              Você pode melhorar a sua presença na web, vender online, vender nas redes sociais, criar conteúdos que mantenham seus clientes interessados na sua marca e muito mais!
+            </StyMainText>
+            <StyMainButtonGeneric primary>COMECE SUA JORNADA</StyMainButtonGeneric>
+          </StyMainCA3Container>
+        </StyMainCA3DivGradient>
       </StyMainCallAction3>
+      <StyMainCallAction4>
+        <StyMainCAH2>Acompanhe Nossos Resultados</StyMainCAH2>
+        <StyMainItemContainerTwo>
+          <StyMainItem>
+
+          </StyMainItem>
+        </StyMainItemContainerTwo>
+      </StyMainCallAction4>
     </StyMainHomeContainer>
   </>
 );
